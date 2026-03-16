@@ -12,7 +12,7 @@
 
 ## 安装
 
-### 方式一：从GitHub安装（推荐）
+### 方式一：从GitHub克隆安装（推荐）
 
 ```bash
 # 克隆仓库
@@ -23,11 +23,20 @@ cd lark-mcp
 pip install -e .
 ```
 
-### 方式二：直接使用pip
+### 方式二：直接从GitHub安装
 
 ```bash
+# 从GitHub直接安装
 pip install git+https://github.com/jiaxinghit/lark-mcp.git
+
+# 如果需要指定分支（如main分支）
+pip install git+https://github.com/jiaxinghit/lark-mcp.git@main
+
+# 如果需要更新到最新版本
+pip install --upgrade git+https://github.com/jiaxinghit/lark-mcp.git
 ```
+
+**注意：** 安装后的包名为 `FeiShu_Enhance_MCP`，但模块导入路径仍为 `lark_mcp`。
 
 ## 配置
 
