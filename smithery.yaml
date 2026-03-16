@@ -1,0 +1,40 @@
+name: feishu-enhance-mcp
+description: 飞书消息监控与文档处理MCP服务器，提供完整的飞书消息收发、监控、文件上传、异步任务功能
+version: 0.1.0
+homepage: https://github.com/jiaxinghit/feishu-enhance-mcp
+repository:
+  type: git
+  url: https://github.com/jiaxinghit/feishu-enhance-mcp.git
+author: FeiShu Enhance MCP Team
+license: MIT
+keywords:
+  - mcp
+  - lark
+  - feishu
+  - chatbot
+  - message
+  - document
+runtime: python
+command:
+  type: stdio
+  command: python
+  args:
+    - -m
+    - feishu_enhance_mcp.server
+environment:
+  APP_ID:
+    description: 飞书应用的 App ID
+    required: true
+  APP_SECRET:
+    description: 飞书应用的 App Secret
+    required: true
+  PRIMARY_CHAT_ID:
+    description: 主监听群聊ID（可选）
+    required: false
+installation:
+  pip: feishu-enhance-mcp
+  github: jiaxinghit/feishu-enhance-mcp
+categories:
+  - communication
+  - productivity
+  - automation

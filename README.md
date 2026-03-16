@@ -23,7 +23,46 @@ cd feishu-enhance-mcp
 pip install -e .
 ```
 
-### 方式二：直接从GitHub安装
+### 方式二：从PyPI安装
+
+```bash
+# 从PyPI直接安装
+pip install feishu-enhance-mcp
+
+# 如果需要更新到最新版本
+pip install --upgrade feishu-enhance-mcp
+```
+
+### 方式三：Trae IDE中安装
+
+**步骤1：安装包**
+```bash
+pip install feishu-enhance-mcp
+```
+
+**步骤2：在Trae中配置**
+1. 打开 Trae → Settings → AI Management → MCP → Add Manually
+2. 粘贴以下配置：
+
+```json
+{
+  "mcpServers": {
+    "feishu-enhance": {
+      "command": "python",
+      "args": ["-m", "feishu_enhance_mcp.server"],
+      "env": {
+        "APP_ID": "your_app_id",
+        "APP_SECRET": "your_app_secret",
+        "PRIMARY_CHAT_ID": "oc_xxx"
+      }
+    }
+  }
+}
+```
+
+3. 点击确认，MCP Server 将自动添加
+
+### 方式四：直接从GitHub安装
 
 ```bash
 # 从GitHub直接安装
