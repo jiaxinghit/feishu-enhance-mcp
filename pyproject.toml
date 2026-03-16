@@ -1,0 +1,47 @@
+[project]
+name = "lark-mcp"
+version = "0.1.0"
+description = "飞书消息监控与文档处理MCP服务器"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Lark MCP Team"}
+]
+keywords = ["mcp", "lark", "feishu", "chatbot"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "lark-oapi>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "apscheduler>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.scripts]
+lark-mcp = "lark_mcp.server:run"
+
+[project.urls]
+Homepage = "https://github.com/example/lark-mcp"
+Documentation = "https://github.com/example/lark-mcp#readme"
+Repository = "https://github.com/example/lark-mcp"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["lark_mcp"]
