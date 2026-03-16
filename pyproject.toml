@@ -1,12 +1,12 @@
 [project]
-name = "FeiShu_Enhance_MCP"
+name = "feishu-enhance-mcp"
 version = "0.1.0"
 description = "飞书消息监控与文档处理MCP服务器"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "Lark MCP Team"}
+    {name = "FeiShu Enhance MCP Team"}
 ]
 keywords = ["mcp", "lark", "feishu", "chatbot"]
 classifiers = [
@@ -32,16 +32,16 @@ dev = [
 ]
 
 [project.scripts]
-feishu-enhance-mcp = "lark_mcp.server:run"
+feishu-enhance-mcp = "feishu_enhance_mcp.server:run"
 
 [project.urls]
-Homepage = "https://github.com/jiaxinghit/lark-mcp"
-Documentation = "https://github.com/jiaxinghit/lark-mcp#readme"
-Repository = "https://github.com/jiaxinghit/lark-mcp"
+Homepage = "https://github.com/jiaxinghit/feishu-enhance-mcp"
+Documentation = "https://github.com/jiaxinghit/feishu-enhance-mcp#readme"
+Repository = "https://github.com/jiaxinghit/feishu-enhance-mcp"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["lark_mcp"]
+packages = ["feishu_enhance_mcp"]

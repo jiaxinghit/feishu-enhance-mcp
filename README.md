@@ -1,4 +1,4 @@
-# Lark MCP Server
+# FeiShu Enhance MCP Server
 
 飞书消息监控与文档处理MCP服务器，提供完整的飞书消息收发、监控、文件上传、异步任务功能。
 
@@ -16,8 +16,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/jiaxinghit/lark-mcp.git
-cd lark-mcp
+git clone https://github.com/jiaxinghit/feishu-enhance-mcp.git
+cd feishu-enhance-mcp
 
 # 安装依赖
 pip install -e .
@@ -27,16 +27,14 @@ pip install -e .
 
 ```bash
 # 从GitHub直接安装
-pip install git+https://github.com/jiaxinghit/lark-mcp.git
+pip install git+https://github.com/jiaxinghit/feishu-enhance-mcp.git
 
 # 如果需要指定分支（如main分支）
-pip install git+https://github.com/jiaxinghit/lark-mcp.git@main
+pip install git+https://github.com/jiaxinghit/feishu-enhance-mcp.git@main
 
 # 如果需要更新到最新版本
-pip install --upgrade git+https://github.com/jiaxinghit/lark-mcp.git
+pip install --upgrade git+https://github.com/jiaxinghit/feishu-enhance-mcp.git
 ```
-
-**注意：** 安装后的包名为 `FeiShu_Enhance_MCP`，但模块导入路径仍为 `lark_mcp`。
 
 ## 配置
 
@@ -60,9 +58,9 @@ pip install --upgrade git+https://github.com/jiaxinghit/lark-mcp.git
 ```json
 {
   "mcpServers": {
-    "lark": {
+    "feishu-enhance": {
       "command": "python",
-      "args": ["-m", "lark_mcp.server"],
+      "args": ["-m", "feishu_enhance_mcp.server"],
       "env": {
         "APP_ID": "your_app_id",
         "APP_SECRET": "your_app_secret",
@@ -78,9 +76,9 @@ pip install --upgrade git+https://github.com/jiaxinghit/lark-mcp.git
 ```json
 {
   "mcpServers": {
-    "lark": {
+    "feishu-enhance": {
       "command": "/path/to/venv/bin/python",
-      "args": ["-m", "lark_mcp.server"],
+      "args": ["-m", "feishu_enhance_mcp.server"],
       "env": {
         "APP_ID": "your_app_id",
         "APP_SECRET": "your_app_secret",
@@ -96,9 +94,9 @@ pip install --upgrade git+https://github.com/jiaxinghit/lark-mcp.git
 ```json
 {
   "mcpServers": {
-    "lark": {
+    "feishu-enhance": {
       "command": "C:\\Users\\YourName\\.venv\\Scripts\\python.exe",
-      "args": ["-m", "lark_mcp.server"],
+      "args": ["-m", "feishu_enhance_mcp.server"],
       "env": {
         "APP_ID": "cli_xxxxxxxxxxxxxxxx",
         "APP_SECRET": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
@@ -117,7 +115,7 @@ pip install --upgrade git+https://github.com/jiaxinghit/lark-mcp.git
 | `APP_SECRET` | 是 | 飞书应用的 App Secret |
 | `PRIMARY_CHAT_ID` | 否 | 主监听群聊ID（可选，也可通过工具动态设置） |
 
-**注意：** 从GitHub安装后，无需设置 `cwd` 参数，因为 `pip install -e .` 会将模块安装到Python环境中，可以直接通过 `python -m lark_mcp.server` 启动。
+**注意：** 从GitHub安装后，无需设置 `cwd` 参数，因为 `pip install -e .` 会将模块安装到Python环境中，可以直接通过 `python -m feishu_enhance_mcp.server` 启动。
 
 ## 消息监听策略
 
@@ -290,8 +288,8 @@ status = lark_get_task_status(task_id="task_xxx")
 ## 目录结构
 
 ```
-lark-mcp/
-├── lark_mcp/              # 主模块
+feishu-enhance-mcp/
+├── feishu_enhance_mcp/     # 主模块
 │   ├── __init__.py
 │   ├── message_processor.py  # 消息处理器（解耦架构）
 │   └── server.py          # MCP服务器

@@ -1,4 +1,4 @@
-"""Lark MCP Server - 飞书消息监控与文档处理MCP服务器
+"""FeiShu Enhance MCP Server - 飞书消息监控与文档处理MCP服务器
 
 提供飞书消息监控、消息收发、文档上传等功能
 """
